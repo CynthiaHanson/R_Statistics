@@ -1,0 +1,10 @@
+setwd("C:/Users/A00462162/Documents/R/Example")
+install.packages("GGally")
+library(GGally)
+
+SA_data <- read.csv("Example.csv")
+SA_data_df <- as.data.frame(SA_data)
+ggcorr(SA_data_df, label=TRUE, label_alpha=TRUE)
+
+#If you need to remove columns use following code as an example
+#SA_data_mod <- SA_data[,-c(2:5)]
